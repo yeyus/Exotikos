@@ -53,13 +53,11 @@ public class TravelStatusActivity extends AppCompatActivity {
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         //ft.add(R.id.llContainer, fragment1, "fragment_one");
-        ft.add(R.id.flCard1, cardViewFragmentList.get(0), "fragment_one");
-
-        ft.add(R.id.flCard1, cardViewFragmentList.get(1), "fragment_two");
-
-        ft.add(R.id.flCard1, cardViewFragmentList.get(2), "fragment_three");
-
-        ft.add(R.id.flCard1, cardViewFragmentList.get(3), "fragment_four");
+        ft.replace(R.id.flCard1, cardViewFragmentList.get(0));
+        ft.replace(R.id.flCard2, cardViewFragmentList.get(1));
+        ft.replace(R.id.flCard3, cardViewFragmentList.get(2));
+        ft.replace(R.id.flCard4, cardViewFragmentList.get(3));
+        ft.replace(R.id.flCard5, cardViewFragmentList.get(4));
         ft.commit();
 //
 //        ft.replace(R.id.flCard5, cardViewFragmentList.get(4));

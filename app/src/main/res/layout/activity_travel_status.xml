@@ -29,19 +29,19 @@
             android:id="@+id/flCard3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="3"/>
 
-        <!--<FrameLayout-->
-            <!--android:id="@+id/flCard4"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1"/>-->
+        <FrameLayout
+            android:id="@+id/flCard4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"/>
 
-        <!--<FrameLayout-->
-            <!--android:id="@+id/flCard5"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="1"/>-->
+        <FrameLayout
+            android:id="@+id/flCard5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
 
     </LinearLayout>
 </ScrollView>

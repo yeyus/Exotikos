@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.exotikosteam.exotikos.R;
@@ -23,15 +22,14 @@ public class CardViewFragment <T extends Fragment> extends Fragment implements E
 
     private String cardName;
     private String relativeTime;
-    private T  f;
+    private T f;
 
     // Bindings
     @BindView(R.id.tvCardName) TextView tvCardName;
     @BindView(R.id.tvTime) TextView tvTime;
-    @BindView(R.id.rlCardContents)
-    ExpandableRelativeLayout rlCardContents;
-    @BindView(R.id.cards)
-    FrameLayout card;
+    @BindView(R.id.rlCardContents) ExpandableRelativeLayout rlCardContents;
+//    @BindView(R.id.cards) FrameLayout card;
+
     // Event topics
     private final PublishSubject<CardViewFragment> titleClickSubject = PublishSubject.create();
 
@@ -69,8 +67,8 @@ public class CardViewFragment <T extends Fragment> extends Fragment implements E
 
         tvCardName.setText(cardName);
         tvTime.setText(relativeTime);
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.cards, f, cardName);
+        FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+        ft.add(R.id.rlCardContents, f, "card_contents_" + f.getClass().getSimpleName());
         ft.commit();
 
         //rlCardContents.setVisibility(getArguments().getBoolean("collapsed") ? View.GONE : View.VISIBLE);
