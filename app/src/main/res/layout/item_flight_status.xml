@@ -64,7 +64,7 @@
             android:layout_toRightOf="@+id/tvFromAirport"
             android:layout_toLeftOf="@+id/tvToAirport"
             android:layout_alignBaseline="@id/tvFromAirport"
-            android:background="@color/colorAccent"/>
+            android:background="@color/accent"/>
 
 
         <TextView

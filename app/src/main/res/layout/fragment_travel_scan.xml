@@ -10,7 +10,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
             android:textSize="40dp"
-            android:background="@color/colorAccent"
+            android:background="@color/accent"
             android:id="@+id/textView" />
 
         <TextView
